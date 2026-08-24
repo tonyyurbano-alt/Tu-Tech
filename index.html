@@ -21,77 +21,52 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,3,10,.65);b
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(139,92,246,.3);background:rgba(139,92,246,.08);border-radius:999px;padding:8px 13px;color:#d8c9ff;font-size:.78rem;font-weight:700;margin-bottom:22px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan)}
-h1{font-size:clamp(3.2rem,6.8vw,6.4rem);line-height:.91;letter-spacing:-.075em;max-width:800px}
+h1{font-size:clamp(3.2rem,6.8vw,6.4rem);line-height:.91;letter-spacing:-.075em;max-width:800px;min-height:1.2em}
 .grad{background:linear-gradient(100deg,#fff 10%,#bd86ff 52%,#42c5ff 95%);-webkit-background-clip:text;color:transparent}
 .hero-copy{color:var(--muted);font-size:1.08rem;max-width:650px;margin-top:25px}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:800;font-size:.9rem;border:1px solid var(--line);display:inline-flex;align-items:center;gap:9px;transition:.25s}.btn:hover{transform:translateY(-3px)}.primary{background:linear-gradient(100deg,var(--purple),var(--blue));color:#fff;box-shadow:0 15px 45px rgba(101,78,255,.22)}.ghost{color:#fff;background:rgba(255,255,255,.04)}
 .hero-art{height:520px;position:relative;display:grid;place-items:center}
-.glow{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.32),transparent 65%);filter:blur(5px)}
-.core{position:relative;width:220px;height:220px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#a477ff,transparent 24%),linear-gradient(145deg,#15102a,#080817);border:1px solid rgba(183,108,255,.5);box-shadow:0 0 80px rgba(139,92,246,.4),inset 0 0 45px rgba(39,169,255,.15);z-index:3}
+.glow{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.32),transparent 65%);filter:blur(5px); animation: glowPulse 4s ease-in-out infinite}
+.core{position:relative;width:220px;height:220px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#a477ff,transparent 24%),linear-gradient(145deg,#15102a,#080817);border:1px solid rgba(183,108,255,.5);box-shadow:0 0 80px rgba(139,92,246,.4),inset 0 0 45px rgba(39,169,255,.15);z-index:3; animation: float 6s ease-in-out infinite}
 .core span{font-size:4.5rem;font-weight:900;letter-spacing:-.12em;background:linear-gradient(100deg,#fff,#a875ff,#47c8ff);-webkit-background-clip:text;color:transparent}
 .ring{position:absolute;border:1px solid rgba(102,135,255,.3);border-radius:50%;transform:rotate(-25deg);animation:spin 18s linear infinite}.r1{width:360px;height:155px}.r2{width:390px;height:190px;transform:rotate(55deg);animation-duration:24s}.r3{width:470px;height:220px;transform:rotate(10deg);animation-duration:30s}
 .node{position:absolute;width:11px;height:11px;border-radius:50%;background:#fff;box-shadow:0 0 20px #8c72ff}.n1{top:95px;right:55px}.n2{bottom:100px;left:45px;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.n3{top:245px;left:0;background:var(--violet)}
 @keyframes spin{to{transform:rotate(335deg)}}
 .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;color:#85859a;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;white-space:nowrap}.ticker span{margin:0 24px}
 section{padding:105px 0}.section-head{max-width:760px;margin-bottom:45px}.kicker{color:#a98aff;font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.section-head h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.06em;margin-top:10px}.section-head p{color:var(--muted);margin-top:16px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.service{min-height:260px;padding:30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));position:relative;overflow:hidden;transition:.3s}.service:hover{transform:translateY(-6px);border-color:rgba(139,92,246,.4)}.service:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-80px;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 68%)}.num{font-size:.72rem;color:#77778d;letter-spacing:.1em}.service h3{font-size:1.55rem;margin:25px 0 8px}.service p{color:var(--muted);max-width:510px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:22px}.tag{font-size:.72rem;padding:6px 9px;border-radius:999px;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.16);color:#c9b9ff}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{padding:38px;border-radius:26px;border:1px solid var(--line);background:var(--card)}.panel h3{font-size:2rem;letter-spacing:-.04em;margin-bottom:13px}.panel p{color:var(--muted)}.checks{margin-top:25px;display:grid;gap:13px}.check{display:flex;gap:11px;color:#dcdceb}.check b{color:#7eebff}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:25px;border-top:1px solid rgba(139,92,246,.4);background:linear-gradient(180deg,rgba(139,92,246,.08),transparent);border-radius:18px}.step strong{font-size:2rem;color:#b38bff}.step h4{margin:8px 0}.step p{font-size:.88rem;color:var(--muted)}
-.banner{padding:70px 50px;border-radius:30px;border:1px solid rgba(139,92,246,.25);background:radial-gradient(circle at 10% 30%,rgba(139,92,246,.22),transparent 30%),radial-gradient(circle at 90% 70%,rgba(39,169,255,.18),transparent 32%),rgba(255,255,255,.025);position:relative;overflow:hidden}.banner h2{font-size:clamp(2.3rem,5vw,4.4rem);line-height:.95;letter-spacing:-.06em;max-width:780px}.banner p{color:var(--muted);max-width:700px;margin-top:17px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{padding:32px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.03)}.contact-card a{color:#fff;text-decoration:none}.contact-card small{display:block;color:#77778d;margin-bottom:7px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.service{min-height:260px;padding:30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));position:relative;overflow:hidden;transition:.4s}.service:hover{transform:translateY(-8px) scale(1.02);border-color:rgba(139,92,246,.5);box-shadow:0 20px 40px rgba(139,92,246,.15)}.service:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-80px;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 68%)}.num{font-size:.72rem;color:#77778d;letter-spacing:.1em}.service h3{font-size:1.55rem;margin:25px 0 8px}.service p{color:var(--muted);max-width:510px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:22px}.tag{font-size:.72rem;padding:6px 9px;border-radius:999px;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.16);color:#c9b9ff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{padding:38px;border-radius:26px;border:1px solid var(--line);background:var(--card); transition:.4s}.panel:hover{transform:translateY(-5px); border-color:rgba(139,92,246,.3)}.panel h3{font-size:2rem;letter-spacing:-.04em;margin-bottom:13px}.panel p{color:var(--muted)}.checks{margin-top:25px;display:grid;gap:13px}.check{display:flex;gap:11px;color:#dcdceb}.check b{color:#7eebff}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:25px;border-top:1px solid rgba(139,92,246,.4);background:linear-gradient(180deg,rgba(139,92,246,.08),transparent);border-radius:18px; transition:.4s}.step:hover{transform:translateY(-6px); background:linear-gradient(180deg,rgba(139,92,246,.15),transparent)}.step strong{font-size:2rem;color:#b38bff}.step h4{margin:8px 0}.step p{font-size:.88rem;color:var(--muted)}
+.banner{padding:70px 50px;border-radius:30px;border:1px solid rgba(139,92,246,.25);background:radial-gradient(circle at 10% 30%,rgba(139,92,246,.22),transparent 30%),radial-gradient(circle at 90% 70%,rgba(39,169,255,.18),transparent 32%),rgba(255,255,255,.025);position:relative;overflow:hidden; transition:.4s}.banner:hover{transform:scale(1.01); box-shadow:0 20px 60px rgba(139,92,246,.2)}.banner h2{font-size:clamp(2.3rem,5vw,4.4rem);line-height:.95;letter-spacing:-.06em;max-width:780px}.banner p{color:var(--muted);max-width:700px;margin-top:17px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{padding:32px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.03); transition:.3s}.contact-card:hover{background:rgba(139,92,246,.08); border-color:rgba(139,92,246,.3); transform:translateY(-3px)}.contact-card a{color:#fff;text-decoration:none}.contact-card small{display:block;color:#77778d;margin-bottom:7px}
 footer{padding:35px 0;border-top:1px solid var(--line);color:#77778d;font-size:.8rem}.footer{display:flex;justify-content:space-between;gap:20px}
+
+/* --- NOVOS EFEITOS PREMIUM --- */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 15px 45px rgba(101,78,255,.22) }
+  50% { transform: scale(1.05); box-shadow: 0 20px 55px rgba(101,78,255,.4) }
+  100% { transform: scale(1); box-shadow: 0 15px 45px rgba(101,78,255,.22) }
+}
+.btn-pulse { animation: pulse 2s infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-12px) }
+}
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1); opacity: 1 }
+  50% { transform: scale(1.2); opacity: .7 }
+}
+
+.revelar { opacity:0; transform: translateY(40px); transition: 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.revelar.ativo { opacity:1; transform: translateY(0); }
+
+.cursor { display:inline-block; width:3px; background:#b76cff; margin-left:4px; animation: blink 1s infinite }
+@keyframes blink { 0%,50% {opacity:1} 51%,100% {opacity:0} }
+
 @media(max-width:850px){.hero-grid,.split,.contact{grid-template-columns:1fr}.hero-art{height:400px}.services{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
 @media(max-width:560px){section{padding:75px 0}.hero{padding-top:125px}.hero-art{height:330px}.core{width:165px;height:165px}.core span{font-size:3.3rem}.r1{width:270px}.r2{width:300px}.r3{width:330px}.process{grid-template-columns:1fr}.banner{padding:38px 25px}.footer{flex-direction:column}}
 </style>
 </head>
 <body>
-<nav><div class="container nav"><div class="logo">TU <i>| Tech Universe 🌐</i></div><div class="navlinks"><a href="#inicio">Início</a><a href="#solucoes">Soluções</a><a href="#sobre">Sobre</a><a href="#processo">Processo</a><a href="#contato">Contato</a></div><a class="btn primary" href="#contato">Fale conosco</a></div></nav>
-
-<section class="hero" id="inicio">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow"><span class="dot"></span> TECNOLOGIA • ESTRATÉGIA • INOVAÇÃO</div>
-<h1>O futuro começa com uma <span class="grad">boa ideia.</span></h1>
-<p class="hero-copy">A <b>TU | Tech Universe</b> conecta tecnologia, marketing, vendas e otimização para transformar ideias em experiências digitais modernas, inteligentes e preparadas para crescer.</p>
-<div class="actions"><a class="btn primary" href="#solucoes">Explorar soluções ↗</a><a class="btn ghost" href="#sobre">Conhecer a TU</a></div>
-</div>
-<div class="hero-art"><div class="glow"></div><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"><span>TU</span></div><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i></div>
-</div>
-</section>
-
-<div class="ticker"><div class="container"><span>TECNOLOGIA</span>•<span>MARKETING</span>•<span>VENDAS</span>•<span>AUTOMAÇÃO</span>•<span>OTIMIZAÇÃO</span>•<span>INOVAÇÃO</span>•</div></div>
-
-<section id="solucoes"><div class="container">
-<div class="section-head"><div class="kicker">O que fazemos</div><h2>Soluções para transformar presença em resultado.</h2><p>Não se trata apenas de estar na internet. É sobre criar uma presença digital que tenha propósito, estratégia e personalidade.</p></div>
-<div class="services">
-<div class="service"><span class="num">01 / TECNOLOGIA</span><h3>Experiências digitais</h3><p>Sites, páginas de apresentação e soluções digitais com visual moderno, responsivo e pensado para gerar confiança.</p><div class="tags"><span class="tag">Web</span><span class="tag">Responsivo</span><span class="tag">UX</span></div></div>
-<div class="service"><span class="num">02 / MARKETING</span><h3>Marca que chama atenção</h3><p>Estratégias de comunicação e presença digital para tornar sua marca mais clara, profissional e memorável.</p><div class="tags"><span class="tag">Branding</span><span class="tag">Conteúdo</span><span class="tag">Social</span></div></div>
-<div class="service"><span class="num">03 / VENDAS</span><h3>Do interesse à conversão</h3><p>Estruturas digitais pensadas para apresentar ofertas, facilitar o contato e transformar visitantes em oportunidades.</p><div class="tags"><span class="tag">Conversão</span><span class="tag">Leads</span><span class="tag">Estratégia</span></div></div>
-<div class="service"><span class="num">04 / OTIMIZAÇÃO</span><h3>Mais eficiência, menos complicação</h3><p>Identificamos pontos de melhoria e usamos tecnologia para simplificar processos e criar operações mais inteligentes.</p><div class="tags"><span class="tag">Automação</span><span class="tag">Processos</span><span class="tag">Performance</span></div></div>
-</div>
-</div></section>
-
-<section id="sobre"><div class="container split">
-<div class="panel"><div class="kicker">Sobre a TU</div><h3>Uma ideia. Um universo de possibilidades.</h3><p>A Tech Universe nasceu da vontade de unir criatividade e tecnologia em soluções que realmente façam sentido para pessoas e empresas.</p><p style="margin-top:14px">Nossa visão é simples: tornar o digital mais estratégico, acessível e impactante — sem perder a identidade de quem está por trás do negócio.</p><div class="checks"><div class="check"><b>✓</b> Pensamento digital e visão de futuro</div><div class="check"><b>✓</b> Design moderno e comunicação clara</div><div class="check"><b>✓</b> Foco em resultado e crescimento</div></div></div>
-<div class="panel"><div class="kicker">Nossa visão</div><h3>Inovação que faz sentido.</h3><p>Grandes resultados não começam necessariamente com grandes estruturas. Começam com uma boa ideia, uma estratégia bem pensada e tecnologia usada da maneira certa.</p><div style="margin-top:28px;padding:25px;border-radius:18px;background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(39,169,255,.08));border:1px solid var(--line)"><strong style="font-size:1.25rem">“Tecnologia que conecta. Ideias que transformam.”</strong></div></div>
-</div></section>
-
-<section id="processo"><div class="container"><div class="section-head"><div class="kicker">Como pensamos</div><h2>Da ideia ao próximo nível.</h2><p>Um processo simples para transformar uma necessidade em uma solução digital com propósito.</p></div><div class="process">
-<div class="step"><strong>01</strong><h4>Descobrir</h4><p>Entendemos o negócio, o público e o objetivo.</p></div>
-<div class="step"><strong>02</strong><h4>Planejar</h4><p>Definimos estratégia, estrutura e prioridades.</p></div>
-<div class="step"><strong>03</strong><h4>Criar</h4><p>Transformamos o plano em uma experiência real.</p></div>
-<div class="step"><strong>04</strong><h4>Evoluir</h4><p>Otimização contínua para acompanhar o crescimento.</p></div>
-</div></div></section>
-
-<section><div class="container"><div class="banner"><div class="kicker">Pronto para começar?</div><h2>Sua próxima grande ideia pode começar aqui.</h2><p>Conte o que você está imaginando. A TU ajuda a transformar a ideia em uma presença digital mais profissional, moderna e estratégica.</p><div class="actions"><a class="btn primary" href="#contato">Quero falar com a TU ↗</a></div></div></div></section>
-
-<section id="contato"><div class="container"><div class="section-head"><div class="kicker">Contato</div><h2>Vamos conversar?</h2><p>Escolha o canal que preferir. Os contatos abaixo podem ser personalizados com os dados reais da TU.</p></div><div class="contact">
-<div class="contact-card"><small>WHATSAPP</small><a href="https://wa.me/5511975732585" target="_blank">+55 (11) 97573-2585 ↗</a></div>
-<div class="contact-card"><small>INSTAGRAM</small><a href="https://instagram.com/tu.techuniverse" target="_blank">@tu.techuniverse ↗</a></div>
-<div class="contact-card"><small>E-MAIL</small><a href="mailto:contato@tutech.com.br">tonyyurbano@gmail.com ↗</a></div>
-<div class="contact-card"><small>ATENDIMENTO</small><span>Fale com a TU e apresente sua ideia.</span></div>
-</div></div></section>
-
-<footer><div class="container footer"><span>© 2026 TU | Tech Universe 🌐</span><span>Tecnologia • Marketing • Vendas • Otimização • Inovação</span></div></footer>
-</body>
-</html>
+<nav><div class="container nav"><div class="logo">TU <i>| Tech Universe 🌐</i></div><div class="navlinks"><a href="#inicio">Início</a><a href="#solucoes">Soluções</a><a href="#sobre">Sobre</a>
